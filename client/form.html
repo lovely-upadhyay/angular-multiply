@@ -1,0 +1,37 @@
+<div class="container" ng-cloak>
+  <div class="row">
+    <div class="col-sm-8 col-sm-offset-2 myapp">
+      <div class="panel panel-default panel-lg">
+        <h3 class="page-header text-center">Multiply</h3>
+        <div class="panel-body">
+          <form name="myappForm">
+            <div class="form-group" ng-class="{ 'has-error': myappForm.fnum.$touched && myappForm.fnum.$invalid }">
+              <label class="control-label">First Number</label>
+              <input type="text" data-ng-model="mac.data.fnum" data-ng-pattern="mac.integerPattern" ng-required="true" placeholder="First Number"
+                  class="form-control" name="fnum">
+              <div class="help-block" ng-messages="myappForm.fnum.$error" ng-show="myappForm.fnum.$touched">
+                <p ng-message="required">This field is required</p>
+                <p ng-message="pattern">Should be a Number / Number should be greater than 0</p>
+              </div>
+            </div>
+            <div class="form-group" ng-class="{ 'has-error': myappForm.snum.$touched && myappForm.snum.$invalid }">
+              <label class="control-label">Second Number</label>
+              <input type="text" data-ng-model="mac.data.snum" data-ng-pattern="mac.integerPattern" ng-required="true" placeholder="Second Number"
+                  class="form-control" name="snum">
+              <div class="help-block" ng-messages="myappForm.snum.$error" ng-show="myappForm.snum.$touched">
+                <p ng-message="required">This field is required</p>
+                <p ng-message="pattern">Should be a number / Number should be greater than 0</p>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="h5 col-sm-6 form-control-static" data-ng-show="mac.output >= 0">Result: <span class="text-success" ng-bind="mac.output"></span></div>
+              <div class="text-right">
+                <button data-ng-disabled="myappForm.$invalid" type="submit" multiply="mac.setResult" numbers="mac.data" class="btn btn-primary">Multiply</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
