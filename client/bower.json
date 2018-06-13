@@ -1,0 +1,20 @@
+{
+  "name": "myapp",
+  "description": "angular-nodejs-mysql application to multiply two numbers",
+  "main": "index.html",
+  "license": "ISC",
+  "homepage": "https://github.com/lovely-upadhyay/angular-multiply",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.6.4",
+    "bootstrap": "~3.3.7",
+    "angular-messages": "~1.5.5",
+    "jquery": "~2.1.3"
+  }
+}
