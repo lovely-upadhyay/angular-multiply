@@ -1,0 +1,14 @@
+{
+  "development": {
+    "host": "localhost",
+    "user": "root",
+    "database": "myapp",
+	"password": "azorazoe"
+  },
+  "production": {
+    "host": "localhost",
+    "user": "myapp",
+    "database": "myapp",
+	"password": "My@pq"
+  }
+}
